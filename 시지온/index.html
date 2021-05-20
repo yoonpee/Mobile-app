@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<html itemscope itemtype="http://schema.org/Article"></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile App</title>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="737319996756-5mas9t8f3c9mfpl4h41u7sc8ml7rj71a.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/2a8ec7a992.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <p>MENTAL HEALTH</p>
+        <h1>Making your best out of a bad day</h1>
+      </div>
+      <div id="contents">
+        <img src="img/img1.png" alt="img1" />
+        <div class="comments">
+          <p class="sum">
+            "...you are empowered to make decisions and choose your own
+            goals..."
+          </p>
+          <p>
+            Every day you meet so many amazing entrepreneurs as well as
+            continuously build these relation ships. <br /><br />inspiring and
+            fun meetings, all-hands & trips(Summer Camp & Summit) Support
+            system! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Asperiores, explicabo.
+          </p>
+        </div>
+        <button class="chat">
+          <span>Comments</span>
+          <i class="far fa-comment"></i>
+        </button>
+        <button class="chat-login">
+            <span>Login first</span>
+            <i class="far fa-comment"></i>
+        </button>
+        
+    </div>
+    <div id="log-in">
+      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" id="google"></div>
+      <script>
+       function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+        }
+      </script>
+    </div>
+    <div id="user-comments" class="userComment">
+        <div class="back"><i class="fas fa-arrow-left"></i></div>
+        <div class="user-info" id="userInfo">
+            <img src="img/pp1.jpg" alt="pp1" />
+            <div class="text-box">
+              <strong>Anita Michoels</strong>
+              <span>3 hrs ago</span>
+              <p>You always give good advice. What would you say to
+              someone?</p>
+            </div>
+            <div class="user-func">
+              <button><i class="far fa-heart" id="heart"></i>Like</button>
+              <button><i class="fas fa-heart-broken"></i>Dislike</button>
+            </div>
+         </div>
+         <div class="user-info" id="userInfo">
+            <img src="img/pp2.jpg" alt="pp2" />
+            <div class="text-box">
+              <strong>Francisco Gibbs</strong>
+              <span>33 mins ago</span>
+              <p>Wow, that's pretty cool solution! I haven't thought that way. thanks!</p>
+            </div>
+            <div class="user-func">
+              <button><i class="far fa-heart" id="heart"></i>Like</button>
+              <button><i class="fas fa-heart-broken"></i>Dislike</button>
+            </div>
+          </div>
+          <div class="user-info" id="userInfo">
+            <img src="img/pp3.jpg" alt="pp3" />
+            <div class="text-box">
+              <strong>Christine Davidson</strong>
+              <span>3 hrs ago</span>
+              <p>Yeah, I do totally agree with it! I appreciate this!</p>
+            </div>
+            <div class="user-func">
+              <button><i class="far fa-heart" id="heart"></i>Like</button>
+              <button><i class="fas fa-heart-broken"></i>Dislike</button>
+            </div>
+          </div>
+          <form class="user-input" id="userInput">
+              <input class="inputValue" type="text" placeholder="Add A Comment">
+              <button class="user-btn" type="submit"><i class="fas fa-pen"></i></button>
+          </form>
+    
+      </div> 
+    <script src="js/script.js"></script>
+  </body>
+</html>
